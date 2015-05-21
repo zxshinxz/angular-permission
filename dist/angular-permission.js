@@ -68,7 +68,8 @@
                         }
                         // If no state is authorized then check for otherwise
                         if (state == undefined && redirectTo.hasOwnProperty('otherwise')) {
-                          state = redirectTo['otherwise'];
+                          state = redirectTo['otherwise'].state;
+                          params = redirectTo['otherwise'].params;
                         }
                       } else {
                         state = redirectTo;
